@@ -1,0 +1,53 @@
+prime-junior-school/
+├── index.html                  # Home page
+├── about.html
+├── academics.html
+├── admissions.html
+├── support.html
+├── contact.html
+│
+├── css/
+│   └── styles.css             # shared global styles
+│
+├── js/
+│   └── script.js              # shared small behaviors (menu, scroll effects…)
+│
+├── assets/
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── hero-campus.jpg    # fallback for video
+│   │   ├── campus-entrance.jpg
+│   │   ├── sam-wambaka.jpg
+│   │   ├── martin-weanga.jpg
+│   │   └── ... (other school photos)
+│   └── video/
+│       └── hero-campus.mp4    # optional looping background video
+│
+└── README.md                  # (optional) notes for yourself or team
+
+
+
+
+=======
+Confirm the structure 
+prime-junior-school/
+├── index.html
+├── about.html
+├── academics.html
+├── admissions.html
+├── support.html
+├── contact.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── assets/
+    ├── images/
+    │   ├── logo.png               ← your school logo
+    │   ├── hero-campus.jpg        ← fallback hero image
+    │   ├── campus-entrance.jpg
+    │   ├── sam-wambaka.jpg
+    │   ├── martin-weanga.jpg
+    │   └── (add more school photos later)
+    └── video/
+        └── hero-campus.mp4        ← optional looping video
