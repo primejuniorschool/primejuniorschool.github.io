@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Prime Junior School</title>
+<link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Slider Styles */
+        .hero-slider { position: relative; height: 75vh; width: 100%; overflow: hidden; display: flex; align-items: center; background-color: #000; }
+        .slider-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out, transform 8s ease; z-index: 1; }
+        .slide.active { opacity: 1; transform: scale(1.1); z-index: 2; }
+        .hero-content-v { position: relative; z-index: 10; text-align: center; color: #fff; text-shadow: 2px 2px 15px rgba(0,0,0,0.6); }
+
+        /* World Class Formal Table Styles */
+        .performance-section { padding: 80px 0; background-color: #f4f7f6; }
+        .table-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px; margin-top: 40px; }
+        
+        .table-container {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid #d1d1d1;
+        }
+
+        /* Formal Branding Header */
+        .official-header {
+            background: #ffffff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 2px solid #d4af37; /* Gold Divider */
+        }
+
+        .header-logo {
+            height: 45px;
+            width: auto;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h4 {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-text p {
+            margin: 0;
+            font-size: 0.7rem;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .year-strip {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .homepage-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .homepage-table th {
+            background: #fcfcfc;
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .homepage-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f9f9f9;
+            font-size: 1rem;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Highlighting Success */
+        .div1-row { background-color: #f0fff4; color: #2e7d32; font-weight: 700; }
+        .total-row { background: #1a1a1a; color: #ffffff !important; font-weight: bold; }
+        .total-row td { color: #ffffff !important; }
+
+        .badge-2025 {
+            background: #d4af37;
+            color: #000;
+            padding: 2px 8px;
+            font-size: 0.65rem;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        /* Leadership Section Styles */
+        .leader-card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .leader-img-container {
+            height: 380px;
+            overflow: hidden;
+        }
+        .leader-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .leader-card:hover .leader-img-container img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Prime Junior School</span>
+        </a>
+        <nav>
+<ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="ple-results.html">PLE Results</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+</ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+<section class="hero-slider">
+    <div class="slider-container">
+        <div class="slide active" style="background-image: url('campus1.jpg');"></div>
+        <div class="slide" style="background-image: url('campus2.jpg');"></div>
+    </div>
+    <div class="container hero-content-v">
+        <h1>Prime Junior School</h1>
+        <p>A Centre for Academic Excellence</p>
+        <div class="hero-cta">
+            <a href="admissions.html" class="btn-primary">Admissions 2026</a>
+        </div>
+    </div>
+</section>
+
+<section class="performance-section">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-family: 'Montserrat'; font-size: 2.4rem; color: #1a1a1a; margin-bottom: 10px;">Official PLE Performance</h2>
+            <div style="width: 60px; height: 4px; background: #d4af37; margin: 0 auto 20px;"></div>
+            <p style="color: #666; max-width: 600px; margin: 0 auto;">Our documented growth over the last three years showcasing the academic excellence of our candidates.</p>
+        </div>
+
+        <div class="table-grid">
+            
+            <div class="table-container">
+                <div class="official-header">
+                    <img src="logo.png" class="header-logo" alt="Prime Logo">
+                    <div class="header-text">
+                        <h4>Prime Junior School</h4>
+                        <p>OFFICIAL ACADEMIC RECORD</p>
+                    </div>
+                </div>
+                <div class="year-strip">PLE RESULTS 2025 <span class="badge-2025">TOP RANK</span></div>
+                <table class="homepage-table">
+                    <thead><tr><th>Division</th><th>Candidates</th><th>Performance</th></tr></thead>
+                    <tbody>
+                        <tr class="div1-row"><td>Division 1</td><td>30</td><td>81.1%</td></tr>
+                        <tr><td>Division 2</td><td>7</td><td>18.9%</td></tr>
+                        <tr><td>Division 3</td><td>0</td><td>0.0%</td></tr>
+                        <tr class="total-row"><td>TOTAL</td><td>37</td><td>100%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <div class="official-header">
+                    <img src="logo.png" class="header-logo" alt="Prime Logo">
+                    <div class="header-text">
+                        <h4>Prime Junior School</h4>
+                        <p>OFFICIAL ACADEMIC RECORD</p>
+                    </div>
+                </div>
+                <div class="year-strip">PLE RESULTS 2024</div>
+                <table class="homepage-table">
+                    <thead><tr><th>Division</th><th>Candidates</th><th>Performance</th></tr></thead>
+                    <tbody>
+                        <tr class="div1-row"><td>Division 1</td><td>24</td><td>72.7%</td></tr>
+                        <tr><td>Division 2</td><td>8</td><td>24.2%</td></tr>
+                        <tr><td>Division 3</td><td>1</td><td>3.1%</td></tr>
+                        <tr class="total-row"><td>TOTAL</td><td>33</td><td>100%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <div class="official-header">
+                    <img src="logo.png" class="header-logo" alt="Prime Logo">
+                    <div class="header-text">
+                        <h4>Prime Junior School</h4>
+                        <p>OFFICIAL ACADEMIC RECORD</p>
+                    </div>
+                </div>
+                <div class="year-strip">PLE RESULTS 2023</div>
+                <table class="homepage-table">
+                    <thead><tr><th>Division</th><th>Candidates</th><th>Performance</th></tr></thead>
+                    <tbody>
+                        <tr class="div1-row"><td>Division 1</td><td>18</td><td>60.0%</td></tr>
+                        <tr><td>Division 2</td><td>10</td><td>33.3%</td></tr>
+                        <tr><td>Division 3</td><td>2</td><td>6.7%</td></tr>
+                        <tr class="total-row"><td>TOTAL</td><td>30</td><td>100%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: #888; font-size: 0.85rem;">
+            * Verified by the Office of the Head Teacher. For detailed subject breakdown, visit our Results Archive.
+        </p>
+    </div>
+</section>
+
+<section class="leadership-section" style="padding: 100px 0; background: #ffffff;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Montserrat'; font-size: 2.4rem; color: #1a1a1a; margin-bottom: 10px;">Our Leadership</h2>
+            <div style="width: 60px; height: 4px; background: #d4af37; margin: 0 auto 20px;"></div>
+            <p style="color: #666;">The visionaries behind our academic success.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+            
+            <div class="leader-card">
+                <div class="leader-img-container">
+                    <img src="director.jpg" alt="Director">
+                </div>
+                <div style="padding: 40px 30px 30px; position: relative;">
+                    <div style="position: absolute; top: -25px; left: 30px; background: #d4af37; color: #fff; padding: 10px 25px; border-radius: 4px; font-weight: bold; font-family: 'Montserrat'; font-size: 0.8rem; letter-spacing: 1px;">DIRECTOR - Sam Wambaka </div>
+                    <h3 style="margin-bottom: 15px; color: #1a1a1a; font-family: 'Montserrat';">Board of Directors</h3>
+                    <p style="color: #555; font-style: italic; line-height: 1.8; font-size: 0.95rem;">
+                        "Our mission is to provide an environment where every child feels valued and inspired. We are committed to building a legacy of excellence that transcends the classroom and prepares our students for a brilliant future."
+                    </p>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <div class="leader-img-container">
+                    <img src="headteacher.jpg" alt="Headteacher">
+                </div>
+                <div style="padding: 40px 30px 30px; position: relative;">
+                    <div style="position: absolute; top: -25px; left: 30px; background: #1a1a1a; color: #fff; padding: 10px 25px; border-radius: 4px; font-weight: bold; font-family: 'Montserrat'; font-size: 0.8rem; letter-spacing: 1px;">HEAD TEACHER - Martin Weanga</div>
+                    <h3 style="margin-bottom: 15px; color: #1a1a1a; font-family: 'Montserrat';">The Head Teacher</h3>
+                    <p style="color: #555; font-style: italic; line-height: 1.8; font-size: 0.95rem;">
+                        "Excellence is our standard. Through discipline and hard work, we nurture our candidates to achieve their full potential. Our consistent PLE performance is a result of the synergy between teachers, parents, and pupils."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Prime Junior School | Sironko Town Council, Uganda</p>
+    </div>
+</footer>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Staff | Prime Junior School</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --dark-navy: #1a1a1a;
+            --light-gray: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Roboto', sans-serif; background-color: var(--light-gray); margin: 0; }
+
+        /* Modern Hero Header */
+        .staff-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('staff.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .staff-hero h1 { font-family: 'Montserrat'; font-size: 3.2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .staff-hero p { font-size: 1.2rem; opacity: 0.9; font-weight: 300; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Organization Chart Style - Directors */
+        .directors-container { margin-top: -60px; position: relative; z-index: 5; }
+        
+        .directors-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .director-card {
+            background: var(--white);
+            border-radius: 15px;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--primary-gold);
+            transition: all 0.4s ease;
+        }
+
+        .director-card:hover { transform: translateY(-10px); }
+
+        .director-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 5px solid #f0f0f0;
+        }
+
+        .director-card h3 { font-family: 'Montserrat'; font-size: 1.4rem; color: var(--dark-navy); margin: 10px 0; }
+        .director-card span { color: var(--primary-gold); font-weight: 700; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; }
+
+        /* Section Separator */
+        .staff-heading {
+            text-align: center;
+            margin: 80px 0 50px;
+        }
+        .staff-heading h2 { font-family: 'Montserrat'; font-size: 2.5rem; color: var(--dark-navy); }
+        .underline { width: 70px; height: 4px; background: var(--primary-gold); margin: 15px auto; }
+
+        /* Staff Grid */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .staff-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .staff-card:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top: 3px solid var(--dark-navy); }
+
+        .staff-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            background: #eee;
+        }
+
+        .staff-card h4 { font-family: 'Montserrat'; font-size: 1.1rem; color: #333; margin: 10px 0 5px; }
+        .staff-card p { font-size: 0.9rem; color: #666; font-weight: 500; margin: 0; }
+
+        @media (max-width: 992px) {
+            .directors-row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .directors-row { grid-template-columns: 1fr; }
+            .staff-hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Prime Junior School</span>
+        </a>
+        <nav>
+<ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="ple-results.html">PLE Results</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+</ul>
+        </nav>
+    </div>
+</header>
+
+<section class="staff-hero">
+    <div class="container">
+        <h1>Meet Our Team</h1>
+        <p>Expert educators dedicated to nurturing the next generation of leaders.</p>
+    </div>
+</section>
+
+<div class="container directors-container">
+    <div class="directors-row">
+        <div class="director-card">
+            <img src="dir1.jpg" alt="Dr. Sam Wambaka" class="director-img" onerror="this.src='https://ui-avatars.com/api/?name=Sam+Wambaka&background=random'">
+            <h3>Dr. Sam Wambaka</h3>
+            <span>Managing Director</span>
+        </div>
+        <div class="director-card">
+            <img src="dir2.jpg" alt="Mrs. Sarah Nabutiti" class="director-img" onerror="this.src='https://ui-avatars.com/api/?name=Sarah+Nabutiti&background=random'">
+            <h3>Mrs. Sarah Nabutiti</h3>
+            <span>Executive Director</span>
+        </div>
+        <div class="director-card">
+            <img src="dir3.jpg" alt="Mr. James Okello" class="director-img" onerror="this.src='https://ui-avatars.com/api/?name=James+Okello&background=random'">
+            <h3>Mr. James Okello</h3>
+            <span>Director of Operations</span>
+        </div>
+    </div>
+
+    <div class="staff-heading">
+        <h2>Academic & Support Staff</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="staff-grid">
+        <div class="staff-card">
+            <img src="staff1.jpg" alt="Martin Weanga" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Martin+Weanga&background=random'">
+            <h4>Martin Weanga</h4>
+            <p>Head Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff2.jpg" alt="Grace Amongin" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Grace+Amongin&background=random'">
+            <h4>Grace Amongin</h4>
+            <p>Deputy Head Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff3.jpg" alt="Peter Mukisa" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Peter+Mukisa&background=random'">
+            <h4>Peter Mukisa</h4>
+            <p>Director of Studies</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff4.jpg" alt="Annet Namatovu" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Annet+Namatovu&background=random'">
+            <h4>Annet Namatovu</h4>
+            <p>Senior Woman Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff5.jpg" alt="John Bosco Musoke" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=John+Bosco+Musoke&background=random'">
+            <h4>John Bosco Musoke</h4>
+            <p>School Bursar</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff6.jpg" alt="Florence Ajok" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Florence+Ajok&background=random'">
+            <h4>Florence Ajok</h4>
+            <p>School Secretary</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff7.jpg" alt="David Ochieng" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=David+Ochieng&background=random'">
+            <h4>David Ochieng</h4>
+            <p>HOD Mathematics</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff8.jpg" alt="Sarah Birungi" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Sarah+Birungi&background=random'">
+            <h4>Sarah Birungi</h4>
+            <p>HOD Science</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff9.jpg" alt="Moses Katende" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Moses+Katende&background=random'">
+            <h4>Moses Katende</h4>
+            <p>HOD SST</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff10.jpg" alt="Lydia Nakato" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Lydia+Nakato&background=random'">
+            <h4>Lydia Nakato</h4>
+            <p>HOD English</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff11.jpg" alt="Samuel Isabirye" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Samuel+Isabirye&background=random'">
+            <h4>Samuel Isabirye</h4>
+            <p>ICT Instructor</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff12.jpg" alt="Catherine Atim" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Catherine+Atim&background=random'">
+            <h4>Catherine Atim</h4>
+            <p>P.7 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff13.jpg" alt="Robert Semakula" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Robert+Semakula&background=random'">
+            <h4>Robert Semakula</h4>
+            <p>P.6 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff14.jpg" alt="Agnes Mirembe" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Agnes+Mirembe&background=random'">
+            <h4>Agnes Mirembe</h4>
+            <p>P.5 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff15.jpg" alt="Isaac Wandera" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Isaac+Wandera&background=random'">
+            <h4>Isaac Wandera</h4>
+            <p>P.4 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff16.jpg" alt="Juliet Nakafeero" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Juliet+Nakafeero&background=random'">
+            <h4>Juliet Nakafeero</h4>
+            <p>P.3 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff17.jpg" alt="Thomas Muloni" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Thomas+Muloni&background=random'">
+            <h4>Thomas Muloni</h4>
+            <p>P.2 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff18.jpg" alt="Priscilla Amuge" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Priscilla+Amuge&background=random'">
+            <h4>Priscilla Amuge</h4>
+            <p>P.1 Class Teacher</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff19.jpg" alt="Brian Tabu" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Brian+Tabu&background=random'">
+            <h4>Brian Tabu</h4>
+            <p>Sports Coordinator</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff20.jpg" alt="Esther Kyomuhendo" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Esther+Kyomuhendo&background=random'">
+            <h4>Esther Kyomuhendo</h4>
+            <p>Music & Drama Lead</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff21.jpg" alt="George William" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=George+William&background=random'">
+            <h4>George William</h4>
+            <p>School Librarian</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff22.jpg" alt="Martha Chemutai" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Martha+Chemutai&background=random'">
+            <h4>Martha Chemutai</h4>
+            <p>Guidance Counselor</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff23.jpg" alt="Alex Mugisha" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Alex+Mugisha&background=random'">
+            <h4>Alex Mugisha</h4>
+            <p>Welfare Officer</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff24.jpg" alt="Doreen Namono" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Doreen+Namono&background=random'">
+            <h4>Doreen Namono</h4>
+            <p>Lower Primary Lead</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="staff25.jpg" alt="Stephen Masaba" class="staff-img" onerror="this.src='https://ui-avatars.com/api/?name=Stephen+Masaba&background=random'">
+            <h4>Stephen Masaba</h4>
+            <p>Estates Manager</p>
+        </div>
+    </div>
+</div>
+
+<footer style="background: #1a1a1a; color: white; padding: 60px 0; text-align: center;">
+    <div class="container">
+        <p>© 2026 Prime Junior School | Sironko Town Council, Uganda</p>
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Triumph Beyond the Stars</p>
+    </div>
+</footer>
+
+</body>
+</html>

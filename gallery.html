@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Prime Junior School</title>
+<link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Prime Junior School</span>
+        </a>
+        <nav>
+<ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="ple-results.html">PLE Results</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+</ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>Our Gallery</h1>
+        <p>Visualizing our journey toward excellence.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="academics">Academics</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card academics"><img src="gallery1.jpg"><div class="overlay">ICT Lab</div></div>
+            <div class="gallery-card sports"><img src="gallery2.jpg"><div class="overlay">Football Team</div></div>
+            <div class="gallery-card events"><img src="gallery3.jpg"><div class="overlay">Speech Day</div></div>
+            <div class="gallery-card academics"><img src="gallery4.jpg"><div class="overlay">Classroom</div></div>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+    <span class="close" id="close-btn">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Prime Junior School | Sironko Town Council, Uganda</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
